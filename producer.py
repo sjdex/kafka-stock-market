@@ -9,7 +9,7 @@ producer = KafkaProducer(bootstrap_servers=['<ip here>:9092'],
                          dumps(x).encode('utf-8'))
 producer.send('demo_test', value={'testkey':'testvalue'})
 
-df = pd.read_csv("data/sample.csv")
+df = pd.read_csv("sample.csv")
 print(df.head())
 
 while True:
